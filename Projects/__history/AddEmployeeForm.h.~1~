@@ -1,0 +1,37 @@
+//---------------------------------------------------------------------------
+
+#ifndef AddEmployeeFormH
+#define AddEmployeeFormH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <FMX.Controls.hpp>
+#include <FMX.Forms.hpp>
+#include <FMX.Colors.hpp>
+#include <FMX.Types.hpp>
+#include <FMX.Controls.Presentation.hpp>
+#include <FMX.Edit.hpp>
+#include <FMX.StdCtrls.hpp>
+//---------------------------------------------------------------------------
+class TForm5 : public TForm
+{
+__published:	// IDE-managed Components
+	TColorBox *ColorBox1;
+	TLabel *Label1;
+	TColorBox *ColorBox2;
+	TLabel *Label2;
+	TEdit *Edit1;
+	TLabel *Label3;
+	TLabel *Label4;
+	TLabel *Label5;
+	TEdit *Edit2;
+	TEdit *Edit3;
+	TEdit *Edit4;
+	TSpeedButton *SpeedButton1;
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm5(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm5 *Form5;
+//---------------------------------------------------------------------------
+#endif

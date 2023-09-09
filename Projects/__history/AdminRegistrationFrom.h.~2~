@@ -1,0 +1,23 @@
+//---------------------------------------------------------------------------
+
+#ifndef AdminRegistrationFromH
+#define AdminRegistrationFromH
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <FMX.Controls.hpp>
+#include <FMX.Forms.hpp>
+#include <FMX.Colors.hpp>
+#include <FMX.Types.hpp>
+//---------------------------------------------------------------------------
+class TAdminRegistrationForm : public TForm
+{
+__published:	// IDE-managed Components
+	TColorBox *ColorBox1;
+private:	// User declarations
+public:		// User declarations
+	__fastcall TAdminRegistrationForm(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TAdminRegistrationForm *AdminRegistrationForm;
+//---------------------------------------------------------------------------
+#endif

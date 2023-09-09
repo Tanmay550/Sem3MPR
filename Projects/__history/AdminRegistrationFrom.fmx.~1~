@@ -1,0 +1,11 @@
+object AdminRegistrationForm: TAdminRegistrationForm
+  Left = 0
+  Top = 0
+  Caption = 'AdminRegisterForm'
+  ClientHeight = 484
+  ClientWidth = 645
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+end

@@ -1,0 +1,147 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'HomePage'
+  ClientHeight = 531
+  ClientWidth = 788
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object ColorBox1: TColorBox
+    Color = claSkyblue
+    Size.Width = 801.000000000000000000
+    Size.Height = 531.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ColorBox2: TColorBox
+      Color = claRoyalblue
+      Position.Y = 56.000000000000000000
+      Size.Width = 796.000000000000000000
+      Size.Height = 65.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Label1: TLabel
+        StyledSettings = [Family]
+        Position.X = 336.000000000000000000
+        Position.Y = -57.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 49.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 28.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claMintcream
+        TextSettings.HorzAlign = Center
+        Text = 'EMS'
+        TabOrder = 0
+        object AddButton: TSpeedButton
+          StyledSettings = [Family]
+          Position.X = -320.000000000000000000
+          Position.Y = 72.000000000000000000
+          Size.Width = 177.000000000000000000
+          Size.Height = 33.000000000000000000
+          Size.PlatformDefault = False
+          Text = 'Add Employee'
+          TextSettings.Font.Size = 22.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+        end
+      end
+      object SpeedButton1: TSpeedButton
+        StyledSettings = [Family]
+        Position.X = 201.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 128.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'View Data'
+        TextSettings.Font.Size = 22.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        object Label2: TLabel
+          StyledSettings = [Family]
+          Position.X = -185.000000000000000000
+          Position.Y = 57.000000000000000000
+          Size.Width = 50.000000000000000000
+          Size.Height = 32.000000000000000000
+          Size.PlatformDefault = False
+          TextSettings.Font.Size = 20.000000000000000000
+          TextSettings.Font.StyleExt = {00070000000000000004000000}
+          TextSettings.FontColor = claWhite
+          Text = 'Sr'
+          TabOrder = 6
+        end
+      end
+    end
+    object Label3: TLabel
+      StyledSettings = [Family]
+      Position.X = 106.000000000000000000
+      Position.Y = 129.000000000000000000
+      Size.Width = 63.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+      Text = 'Name'
+      TabOrder = 1
+    end
+    object Label4: TLabel
+      StyledSettings = [Family]
+      Position.X = 234.000000000000000000
+      Position.Y = 129.000000000000000000
+      Size.Width = 23.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+      Text = 'ID'
+      TabOrder = 2
+      object Label6: TLabel
+        StyledSettings = [Family]
+        Position.X = 288.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 20.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        Text = 'Department'
+        TabOrder = 3
+      end
+    end
+    object Label5: TLabel
+      StyledSettings = [Family]
+      Position.X = 360.000000000000000000
+      Position.Y = 129.000000000000000000
+      Size.Width = 65.000000000000000000
+      Size.Height = 32.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+      Text = 'Phone'
+      TabOrder = 3
+    end
+    object ColorBox3: TColorBox
+      Color = claWhite
+      Position.X = 8.000000000000000000
+      Position.Y = 160.000000000000000000
+      Size.Width = 769.000000000000000000
+      Size.Height = 363.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      object DataBox: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 0
+        TextSettings.Font.Size = 18.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        Size.Width = 769.000000000000000000
+        Size.Height = 363.000000000000000000
+        Size.PlatformDefault = False
+        StyledSettings = [Family, FontColor]
+      end
+    end
+  end
+end
