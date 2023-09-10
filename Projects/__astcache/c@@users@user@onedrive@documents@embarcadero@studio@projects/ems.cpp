@@ -7,9 +7,9 @@
 #pragma hdrstop
 #include <System.StartUpCopy.hpp>
 //---------------------------------------------------------------------------
-USEFORM("HomePage.cpp", Form1);
+USEFORM("HomePage.cpp", DataPage);
 USEFORM("LoginForm.cpp", Login);
-USEFORM("TaskListEmployee.cpp", TaskListEmployeeForm);
+USEFORM("TaskListEmployee.cpp", TaskList);
 USEFORM("AddEmployeeForm.cpp", EmployeeAddForm);
 USEFORM("AdminRegistrationFrom.cpp", AdminRegistrationForm);
 //---------------------------------------------------------------------------
@@ -20,8 +20,8 @@ extern "C" int FMXmain()
 		Application->Initialize();
 		Application->CreateForm(__classid(TLogin), &Login);
 		Application->CreateForm(__classid(TEmployeeAddForm), &EmployeeAddForm);
-		Application->CreateForm(__classid(TForm1), &Form1);
-		Application->CreateForm(__classid(TTaskListEmployeeForm), &TaskListEmployeeForm);
+		Application->CreateForm(__classid(TDataPage), &DataPage);
+		Application->CreateForm(__classid(TTaskList), &TaskList);
 		Application->CreateForm(__classid(TAdminRegistrationForm), &AdminRegistrationForm);
 		Application->Run();
 	}

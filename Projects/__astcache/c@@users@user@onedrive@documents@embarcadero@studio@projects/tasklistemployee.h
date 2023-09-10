@@ -12,7 +12,7 @@
 #include <FMX.Types.hpp>
 #include <FMX.Edit.hpp>
 //---------------------------------------------------------------------------
-class TTaskListEmployeeForm : public TForm
+class TTaskList : public TForm
 {
 __published:	// IDE-managed Components
 	TColorBox *ColorBox1;
@@ -26,9 +26,9 @@ __published:	// IDE-managed Components
 	void __fastcall LogoutButtonClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
-	__fastcall TTaskListEmployeeForm(TComponent* Owner);
+	__fastcall TTaskList(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TTaskListEmployeeForm *TaskListEmployeeForm;
+extern PACKAGE TTaskList *TaskList;
 //---------------------------------------------------------------------------
 #endif

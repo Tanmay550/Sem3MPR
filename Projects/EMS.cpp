@@ -9,7 +9,7 @@
 //---------------------------------------------------------------------------
 USEFORM("HomePage.cpp", DataPage);
 USEFORM("LoginForm.cpp", Login);
-USEFORM("TaskListEmployee.cpp", TaskListEmployeeForm);
+USEFORM("TaskListEmployee.cpp", TaskList);
 USEFORM("AddEmployeeForm.cpp", EmployeeAddForm);
 USEFORM("AdminRegistrationFrom.cpp", AdminRegistrationForm);
 //---------------------------------------------------------------------------
@@ -21,7 +21,7 @@ extern "C" int FMXmain()
 		Application->CreateForm(__classid(TLogin), &Login);
 		Application->CreateForm(__classid(TEmployeeAddForm), &EmployeeAddForm);
 		Application->CreateForm(__classid(TDataPage), &DataPage);
-		Application->CreateForm(__classid(TTaskListEmployeeForm), &TaskListEmployeeForm);
+		Application->CreateForm(__classid(TTaskList), &TaskList);
 		Application->CreateForm(__classid(TAdminRegistrationForm), &AdminRegistrationForm);
 		Application->Run();
 	}

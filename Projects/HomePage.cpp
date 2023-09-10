@@ -5,6 +5,7 @@
 
 #include "HomePage.h"
 #include "LoginForm.h"
+#include "AddEmployeeForm.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.fmx"
@@ -20,4 +21,19 @@ __fastcall TDataPage::TDataPage(TComponent* Owner)
 
 
 
+
+void __fastcall TDataPage::LogoutButtonClick(TObject *Sender)
+{
+	  Login->Show();
+	  this->Hide();
+
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TDataPage::AddEmployeeButtonClick(TObject *Sender)
+{
+	 EmployeeAddForm->Show();
+
+}
+//---------------------------------------------------------------------------
 

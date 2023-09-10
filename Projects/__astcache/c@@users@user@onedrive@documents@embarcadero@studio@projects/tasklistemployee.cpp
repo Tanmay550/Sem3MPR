@@ -8,14 +8,14 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.fmx"
-TTaskListEmployeeForm *TaskListEmployeeForm;
+TTaskList *TaskList;
 //---------------------------------------------------------------------------
-__fastcall TTaskListEmployeeForm::TTaskListEmployeeForm(TComponent* Owner)
+__fastcall TTaskList::TTaskList(TComponent* Owner)
 	: TForm(Owner)
 {
 }
 //---------------------------------------------------------------------------
-void __fastcall TTaskListEmployeeForm::LogoutButtonClick(TObject *Sender)
+void __fastcall TTaskList::LogoutButtonClick(TObject *Sender)
 {
    this->Hide();
 

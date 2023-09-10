@@ -28,6 +28,8 @@ __published:	// IDE-managed Components
 	TColorBox *ColorBox3;
 	TEdit *DataBox;
 	TSpeedButton *LogoutButton;
+	void __fastcall LogoutButtonClick(TObject *Sender);
+	void __fastcall AddEmployeeButtonClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TDataPage(TComponent* Owner);

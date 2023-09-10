@@ -182,7 +182,7 @@
             <BuildOrder>6</BuildOrder>
         </CppCompile>
         <CppCompile Include="TaskListEmployee.cpp">
-            <Form>TaskListEmployeeForm</Form>
+            <Form>TaskList</Form>
             <FormType>fmx</FormType>
             <DependentOn>TaskListEmployee.h</DependentOn>
             <BuildOrder>4</BuildOrder>

@@ -5,6 +5,9 @@
 
 #include "LoginForm.h"
 #include "HomePage.h"
+#include "AdminRegistrationFrom.h"
+#include "TaskListEmployee.h"
+
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.fmx"
@@ -22,8 +25,20 @@ __fastcall TLogin::TLogin(TComponent* Owner)
 void __fastcall TLogin::LoginButtonAClick(TObject *Sender)
 {
    DataPage->Show();
-
-
 }
 //---------------------------------------------------------------------------
+
+void __fastcall TLogin::RegisterButtonClick(TObject *Sender)
+{
+     AdminRegistrationForm->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TLogin::LoginButtonBClick(TObject *Sender)
+{
+	TaskList->Show();
+}
+//---------------------------------------------------------------------------
+
+
 

@@ -44,6 +44,7 @@ object DataPage: TDataPage
         TextSettings.Font.Size = 22.000000000000000000
         TextSettings.Font.StyleExt = {00070000000000000004000000}
         TextSettings.FontColor = claWhite
+        OnClick = LogoutButtonClick
       end
       object AddEmployeeButton: TSpeedButton
         StyledSettings = [Family]
@@ -56,6 +57,7 @@ object DataPage: TDataPage
         TextSettings.Font.Size = 22.000000000000000000
         TextSettings.Font.StyleExt = {00070000000000000004000000}
         TextSettings.FontColor = claWhite
+        OnClick = AddEmployeeButtonClick
       end
     end
     object Label3: TLabel

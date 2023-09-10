@@ -1,0 +1,172 @@
+object Login: TLogin
+  Left = 0
+  Top = 0
+  Caption = 'LoginForm'
+  ClientHeight = 504
+  ClientWidth = 666
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object ColorBox1: TColorBox
+    Color = claRoyalblue
+    Size.Width = 666.000000000000000000
+    Size.Height = 504.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object ColorBox2: TColorBox
+      Color = claSkyblue
+      Position.Y = -8.000000000000000000
+      Size.Width = 337.000000000000000000
+      Size.Height = 512.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      object Label1: TLabel
+        StyledSettings = [Family]
+        Position.X = 280.000000000000000000
+        Position.Y = 32.000000000000000000
+        Size.Width = 120.000000000000000000
+        Size.Height = 33.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 26.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        TextSettings.HorzAlign = Center
+        Text = 'EMS'
+        TabOrder = 0
+      end
+      object PasswordEdit: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 1
+        Position.X = 160.000000000000000000
+        Position.Y = 269.000000000000000000
+        Size.Width = 129.000000000000000000
+        Size.Height = 27.000000000000000000
+        Size.PlatformDefault = False
+      end
+      object Label5: TLabel
+        StyledSettings = [Family]
+        Position.X = 376.000000000000000000
+        Position.Y = 152.000000000000000000
+        Size.Width = 185.000000000000000000
+        Size.Height = 48.000000000000000000
+        Size.PlatformDefault = False
+        TextSettings.Font.Size = 36.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        Text = 'Employee'
+        TabOrder = 2
+      end
+      object RegisterButton: TSpeedButton
+        StyledSettings = [Family]
+        Position.X = 15.000000000000000000
+        Position.Y = 353.000000000000000000
+        Size.Width = 144.000000000000000000
+        Size.Height = 41.000000000000000000
+        Size.PlatformDefault = False
+        Text = 'Register'
+        TextSettings.Font.Size = 26.000000000000000000
+        TextSettings.Font.StyleExt = {00070000000000000004000000}
+        TextSettings.FontColor = claWhite
+        OnClick = RegisterButtonClick
+      end
+      object UsernameAdminEdit: TEdit
+        Touch.InteractiveGestures = [LongTap, DoubleTap]
+        TabOrder = 6
+        Position.X = 160.000000000000000000
+        Position.Y = 224.000000000000000000
+        Size.Width = 129.000000000000000000
+        Size.Height = 25.000000000000000000
+        Size.PlatformDefault = False
+      end
+    end
+    object Label2: TLabel
+      StyledSettings = [Family]
+      Position.X = -8.000000000000000000
+      Position.Y = 159.000000000000000000
+      Size.Width = 208.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 36.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+      TextSettings.HorzAlign = Center
+      Text = 'Admin'
+      TabOrder = 1
+    end
+    object LoginButtonA: TSpeedButton
+      StyledSettings = [Family]
+      Position.X = 8.000000000000000000
+      Position.Y = 296.000000000000000000
+      Size.Width = 144.000000000000000000
+      Size.Height = 41.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Login'
+      TextSettings.Font.Size = 26.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+      OnClick = LoginButtonAClick
+    end
+    object Label3: TLabel
+      StyledSettings = [Family]
+      Position.X = 39.000000000000000000
+      Position.Y = 208.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+      Text = 'Username :'
+      TabOrder = 3
+    end
+    object Label6: TLabel
+      StyledSettings = [Family]
+      Position.X = 376.000000000000000000
+      Position.Y = 216.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 20.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+      Text = 'Username :'
+      TabOrder = 4
+    end
+    object EmployeeUsernameEdit: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 5
+      Position.X = 497.000000000000000000
+      Position.Y = 216.000000000000000000
+      Size.Width = 128.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object LoginButtonE: TSpeedButton
+      StyledSettings = [Family]
+      Position.X = 376.000000000000000000
+      Position.Y = 249.000000000000000000
+      Size.Width = 80.000000000000000000
+      Size.Height = 39.000000000000000000
+      Size.PlatformDefault = False
+      Text = 'Login'
+      TextSettings.Font.Size = 26.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+      OnClick = LoginButtonEClick
+    end
+  end
+  object Label4: TLabel
+    StyledSettings = [Family]
+    Position.X = 39.000000000000000000
+    Position.Y = 261.000000000000000000
+    Size.Width = 120.000000000000000000
+    Size.Height = 27.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 20.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+    TextSettings.FontColor = claWhite
+    Text = 'Password :'
+    TabOrder = 1
+  end
+end
