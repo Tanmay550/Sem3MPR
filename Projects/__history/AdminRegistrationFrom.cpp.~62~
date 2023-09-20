@@ -1,0 +1,55 @@
+//---------------------------------------------------------------------------
+
+#include <fmx.h>
+#include <string>
+#include <FireDAC.Phys.SQLite.hpp>
+#include <FireDAC.UI.Intf.hpp>
+
+
+#pragma hdrstop
+
+#include "AdminRegistrationFrom.h"
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.fmx"
+TAdminRegistrationForm *AdminRegistrationForm;
+//---------------------------------------------------------------------------
+__fastcall TAdminRegistrationForm::TAdminRegistrationForm(TComponent* Owner)
+	: TForm(Owner)
+{
+
+}
+//---------------------------------------------------------------------------
+
+
+
+
+void __fastcall TAdminRegistrationForm::RegisterButtonClick(TObject *Sender)
+{
+
+	TFDQuery *query = new TFDQuery(NULL);
+	String username = NameEditAdminR->Text; // Replace Edit1 with the actual name of your TEdit component.
+	String userInput2 = UsernameEditAdminR->Text; // Replace Edit2 with the actual name of your TEdit component.
+
+// Construct the SQL INSERT statement.
+query->SQL->Text = "INSERT INTO Admin (Name) VALUES (:value1)";
+
+// Bind parameters with user input.
+	query->Params->ParamByName("value1")->Value = username;
+	//query->Params->ParamByName("value2")->Value = userInput2;
+
+try {
+    // Execute the SQL INSERT statement.
+	query->ExecSQL();
+	ShowMessage("Data inserted successfully."); // Display a success message.
+} catch (Exception &e) {
+    ShowMessage("Error: " + e.Message); // Display an error message if an exception occurs.
+}
+
+
+// Free the query object when done.
+
+delete query;
+}
+//---------------------------------------------------------------------------
+

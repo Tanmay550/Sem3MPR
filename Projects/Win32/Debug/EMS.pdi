@@ -1,2 +1,12 @@
+bindengine280.bpl
+bindcompfmx280.bpl
+bindcomp280.bpl
+fmxFireDAC280.bpl
+FireDAC280.bpl
+dbrtl280.bpl
+xmlrtl280.bpl
+FireDACCommon280.bpl
+FireDACCommonDriver280.bpl
+FireDACSqliteDriver280.bpl
 fmx280.bpl
 rtl280.bpl

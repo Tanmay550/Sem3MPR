@@ -1,6 +1,7 @@
 ﻿//---------------------------------------------------------------------------
 
 #include <fmx.h>
+
 #pragma hdrstop
 
 #include "LoginForm.h"
@@ -25,6 +26,7 @@ __fastcall TLogin::TLogin(TComponent* Owner)
 void __fastcall TLogin::LoginButtonAClick(TObject *Sender)
 {
    DataPage->Show();
+
 }
 //---------------------------------------------------------------------------
 

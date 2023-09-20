@@ -1,6 +1,11 @@
-//---------------------------------------------------------------------------
+﻿//---------------------------------------------------------------------------
 
 #include <fmx.h>
+#include <string>
+#include <FireDAC.Phys.SQLite.hpp>
+#include <FireDAC.UI.Intf.hpp>
+
+
 #pragma hdrstop
 
 #include "AdminRegistrationFrom.h"
@@ -12,5 +17,11 @@ TAdminRegistrationForm *AdminRegistrationForm;
 __fastcall TAdminRegistrationForm::TAdminRegistrationForm(TComponent* Owner)
 	: TForm(Owner)
 {
+
 }
 //---------------------------------------------------------------------------
+
+
+
+
+

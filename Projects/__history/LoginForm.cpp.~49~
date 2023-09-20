@@ -1,0 +1,82 @@
+//---------------------------------------------------------------------------
+
+#include <fmx.h>
+#include <sqlite3.h>
+#pragma hdrstop
+
+#include "LoginForm.h"
+#include "HomePage.h"
+#include "AdminRegistrationFrom.h"
+#include "TaskListEmployee.h"
+
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.fmx"
+TLogin *Login;
+//---------------------------------------------------------------------------
+__fastcall TLogin::TLogin(TComponent* Owner)
+	: TForm(Owner)
+{
+
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TLogin::LoginButtonAClick(TObject *Sender)
+{
+   DataPage->Show();
+   sqlite3 * db;
+   char* errMsg = 0;
+   int rc = sqlite3_open("EMS.db", &db);
+   if (rc) {
+		ShowMessage("Can't open database: " + String(sqlite3_errmsg(db)));
+        sqlite3_close(db);
+		return;
+	}
+	String username = UsernameAdminEdit->Text;
+	String password = PasswordEdit->Text;
+	 // Convert the String to a utf-8 string
+	 System::AnsiString ansiUsername = AnsiString(username); // or UTF8String utf8Name = UTF8String(name);
+	 System::AnsiString ansiPassword = AnsiString(password);
+	 String insertDataSQL = "INSERT INTO Admin Login (Username) VALUES (?,?)";
+	 const char* query_cstr = (const char*)(System::Runtime::InteropServices::Marshal::StringToHGlobalAnsi(insertDataSQL)).ToPointer();
+	 sqlite3_stmt* stmt;
+	 rc = sqlite3_prepare_v2(db, query_cstr, -1, &stmt, 0);
+
+
+	   if (rc == SQLITE_OK)
+		{
+		sqlite3_bind_text(stmt, 1, ansiUsername.c_str(), -1, SQLITE_STATIC);
+		sqlite3_bind_text(stmt, 2, ansiPassword.c_str(), -1, SQLITE_STATIC);
+
+        if (sqlite3_step(stmt) != SQLITE_DONE) {
+            ShowMessage("Insert failed: " + String(sqlite3_errmsg(db)));
+        } else {
+            ShowMessage("Data inserted successfully");
+        }
+    } else {
+        ShowMessage("SQL error: " + String(sqlite3_errmsg(db)));
+    }
+
+    sqlite3_finalize(stmt);
+
+    // Close the database
+    sqlite3_close(db);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TLogin::RegisterButtonClick(TObject *Sender)
+{
+     AdminRegistrationForm->Show();
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TLogin::LoginButtonBClick(TObject *Sender)
+{
+	TaskList->Show();
+}
+//---------------------------------------------------------------------------
+
+
+

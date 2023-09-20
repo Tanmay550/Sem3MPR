@@ -9,6 +9,7 @@ object TaskList: TTaskList
   FormFactor.Devices = [Desktop]
   DesignerMasterStyle = 0
   object ColorBox1: TColorBox
+    Align = Client
     Color = claRoyalblue
     Size.Width = 650.000000000000000000
     Size.Height = 485.000000000000000000

@@ -18,7 +18,7 @@ object AdminRegistrationForm: TAdminRegistrationForm
     object Label1: TLabel
       StyledSettings = [Family]
       Position.X = 33.000000000000000000
-      Position.Y = 88.000000000000000000
+      Position.Y = 91.000000000000000000
       Size.Width = 73.000000000000000000
       Size.Height = 25.000000000000000000
       Size.PlatformDefault = False
@@ -26,22 +26,13 @@ object AdminRegistrationForm: TAdminRegistrationForm
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       TextSettings.FontColor = claWhite
       Text = 'Name:'
-      TabOrder = 4
+      TabOrder = 3
     end
     object NameEditAdminR: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 9
+      TabOrder = 7
       Position.X = 161.000000000000000000
-      Position.Y = 88.000000000000000000
-      Size.Width = 208.000000000000000000
-      Size.Height = 22.000000000000000000
-      Size.PlatformDefault = False
-    end
-    object IdEditAdminR: TEdit
-      Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 8
-      Position.X = 161.000000000000000000
-      Position.Y = 144.000000000000000000
+      Position.Y = 91.000000000000000000
       Size.Width = 208.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
@@ -49,7 +40,7 @@ object AdminRegistrationForm: TAdminRegistrationForm
     object Label2: TLabel
       StyledSettings = [Family]
       Position.X = 33.000000000000000000
-      Position.Y = 195.000000000000000000
+      Position.Y = 147.000000000000000000
       Size.Width = 113.000000000000000000
       Size.Height = 25.000000000000000000
       Size.PlatformDefault = False
@@ -57,7 +48,7 @@ object AdminRegistrationForm: TAdminRegistrationForm
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       TextSettings.FontColor = claWhite
       Text = 'Username:'
-      TabOrder = 3
+      TabOrder = 2
     end
     object Label3: TLabel
       StyledSettings = [Family]
@@ -71,26 +62,13 @@ object AdminRegistrationForm: TAdminRegistrationForm
       TextSettings.FontColor = claWhite
       TextSettings.HorzAlign = Center
       Text = 'Admin Registration'
-      TabOrder = 10
-    end
-    object Label4: TLabel
-      StyledSettings = [Family]
-      Position.X = 33.000000000000000000
-      Position.Y = 141.000000000000000000
-      Size.Width = 64.000000000000000000
-      Size.Height = 25.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.Size = 22.000000000000000000
-      TextSettings.Font.StyleExt = {00070000000000000004000000}
-      TextSettings.FontColor = claWhite
-      Text = 'Id:'
-      TabOrder = 0
+      TabOrder = 8
     end
     object UsernameEditAdminR: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 7
+      TabOrder = 6
       Position.X = 161.000000000000000000
-      Position.Y = 198.000000000000000000
+      Position.Y = 150.000000000000000000
       Size.Width = 208.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
@@ -98,7 +76,7 @@ object AdminRegistrationForm: TAdminRegistrationForm
     object Label5: TLabel
       StyledSettings = [Family]
       Position.X = 33.000000000000000000
-      Position.Y = 256.000000000000000000
+      Position.Y = 199.000000000000000000
       Size.Width = 113.000000000000000000
       Size.Height = 25.000000000000000000
       Size.PlatformDefault = False
@@ -106,43 +84,30 @@ object AdminRegistrationForm: TAdminRegistrationForm
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       TextSettings.FontColor = claWhite
       Text = 'Password:'
-      TabOrder = 2
+      TabOrder = 1
     end
     object PasswordEditAdminR: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 6
+      TabOrder = 5
       Position.X = 161.000000000000000000
-      Position.Y = 259.000000000000000000
+      Position.Y = 202.000000000000000000
       Size.Width = 208.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
     end
     object EmailEditAdminR: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 5
+      TabOrder = 4
       Position.X = 161.000000000000000000
-      Position.Y = 318.000000000000000000
+      Position.Y = 254.000000000000000000
       Size.Width = 208.000000000000000000
       Size.Height = 22.000000000000000000
       Size.PlatformDefault = False
     end
-    object Label6: TLabel
-      StyledSettings = [Family]
-      Position.X = 33.000000000000000000
-      Position.Y = 315.000000000000000000
-      Size.Width = 113.000000000000000000
-      Size.Height = 25.000000000000000000
-      Size.PlatformDefault = False
-      TextSettings.Font.Size = 22.000000000000000000
-      TextSettings.Font.StyleExt = {00070000000000000004000000}
-      TextSettings.FontColor = claWhite
-      Text = 'Email:'
-      TabOrder = 1
-    end
     object RegisterButton: TSpeedButton
       StyledSettings = [Family]
       Position.X = 289.000000000000000000
-      Position.Y = 368.000000000000000000
+      Position.Y = 304.000000000000000000
       Size.Width = 104.000000000000000000
       Size.Height = 33.000000000000000000
       Size.PlatformDefault = False
@@ -151,5 +116,30 @@ object AdminRegistrationForm: TAdminRegistrationForm
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       TextSettings.FontColor = claWhite
     end
+    object Label4: TLabel
+      StyledSettings = [Family]
+      Position.X = 33.000000000000000000
+      Position.Y = 251.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 22.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+      Text = 'Email:'
+      TabOrder = 0
+    end
+  end
+  object FDQuery1: TFDQuery
+    ConnectionName = 'SQLiteconnection'
+    UpdateOptions.AssignedValues = [uvAutoCommitUpdates]
+    UpdateOptions.AutoCommitUpdates = True
+    Left = 432
+    Top = 200
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'FMX'
+    Left = 512
+    Top = 232
   end
 end
