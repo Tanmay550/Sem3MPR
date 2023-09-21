@@ -12,22 +12,16 @@ Coordinates=10,78,123,51
 
 [ColorBox1]
 Coordinates=10,214,66,33
+Visible=True
 
 [Label2]
 Coordinates=310,78,46,51
-
-[FDGUIxWaitCursor1]
-Coordinates=520,1,113,33
 
 [EmailEditAdminR]
 Coordinates=10,146,100,51
 
 [Label3]
 Coordinates=135,146,46,51
-
-[FDQuery1]
-Coordinates=261,146,63,51
-Visible=True
 
 [NameEditAdminR]
 Coordinates=10,10,101,51
@@ -39,5 +33,16 @@ Coordinates=161,78,121,51
 Coordinates=246,10,46,51
 
 []
-Coordinates=330,148,132,33
+Coordinates=394,53,144,33
+Visible=True
+
+[Sqlite_demoConnection]
+Coordinates=401,1,132,33
+
+[AdminTable]
+Coordinates=504,175,73,141
+
+[FDQuery1]
+Coordinates=320,148,63,51
+Visible=True
 

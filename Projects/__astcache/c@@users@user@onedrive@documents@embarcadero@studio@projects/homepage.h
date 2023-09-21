@@ -57,15 +57,13 @@ __published:	// IDE-managed Components
 	TLabel *Label1;
 	TColorBox *ColorBox2;
 	TSpeedButton *LogoutButton;
-	TSpeedButton *AddEmployeeButton;
-	TSpeedButton *ViewDataButton;
-	TGrid *Grid1;
 	TBindNavigator *BindNavigator1;
 	TFDConnection *Sqlite_demoConnection;
 	TFDQuery *EmployeeTable;
 	TBindSourceDB *BindSourceDB1;
 	TBindingsList *BindingsList1;
-	TLinkGridToDataSource *LinkGridToDataSourceBindSourceDB1;
+	TGrid *Grid1;
+	TLinkGridToDataSource *LinkGridToDataSourceBindSourceDB12;
 	void __fastcall LogoutButtonClick(TObject *Sender);
 	void __fastcall AddEmployeeButtonClick(TObject *Sender);
 private:	// User declarations

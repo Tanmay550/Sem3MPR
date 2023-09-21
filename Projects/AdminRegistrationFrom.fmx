@@ -10,7 +10,6 @@ object AdminRegistrationForm: TAdminRegistrationForm
   DesignerMasterStyle = 0
   object ColorBox1: TColorBox
     Color = claRoyalblue
-    Position.X = -8.000000000000000000
     Size.Width = 669.000000000000000000
     Size.Height = 498.000000000000000000
     Size.PlatformDefault = False
@@ -26,11 +25,11 @@ object AdminRegistrationForm: TAdminRegistrationForm
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       TextSettings.FontColor = claWhite
       Text = 'Name:'
-      TabOrder = 3
+      TabOrder = 4
     end
     object NameEditAdminR: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 7
+      TabOrder = 9
       Position.X = 161.000000000000000000
       Position.Y = 91.000000000000000000
       Size.Width = 208.000000000000000000
@@ -62,11 +61,11 @@ object AdminRegistrationForm: TAdminRegistrationForm
       TextSettings.FontColor = claWhite
       TextSettings.HorzAlign = Center
       Text = 'Admin Registration'
-      TabOrder = 8
+      TabOrder = 10
     end
     object UsernameEditAdminR: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 6
+      TabOrder = 8
       Position.X = 161.000000000000000000
       Position.Y = 150.000000000000000000
       Size.Width = 208.000000000000000000
@@ -88,7 +87,7 @@ object AdminRegistrationForm: TAdminRegistrationForm
     end
     object PasswordEditAdminR: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 5
+      TabOrder = 7
       Position.X = 161.000000000000000000
       Position.Y = 202.000000000000000000
       Size.Width = 208.000000000000000000
@@ -97,7 +96,7 @@ object AdminRegistrationForm: TAdminRegistrationForm
     end
     object EmailEditAdminR: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 4
+      TabOrder = 6
       Position.X = 161.000000000000000000
       Position.Y = 254.000000000000000000
       Size.Width = 208.000000000000000000
@@ -106,8 +105,8 @@ object AdminRegistrationForm: TAdminRegistrationForm
     end
     object RegisterButton: TSpeedButton
       StyledSettings = [Family]
-      Position.X = 289.000000000000000000
-      Position.Y = 304.000000000000000000
+      Position.X = 265.000000000000000000
+      Position.Y = 392.000000000000000000
       Size.Width = 104.000000000000000000
       Size.Height = 33.000000000000000000
       Size.PlatformDefault = False
@@ -115,6 +114,7 @@ object AdminRegistrationForm: TAdminRegistrationForm
       TextSettings.Font.Size = 22.000000000000000000
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       TextSettings.FontColor = claWhite
+      OnClick = RegisterButtonClick
     end
     object Label4: TLabel
       StyledSettings = [Family]
@@ -129,17 +129,48 @@ object AdminRegistrationForm: TAdminRegistrationForm
       Text = 'Email:'
       TabOrder = 0
     end
+    object IdEditAdminR: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 5
+      Position.X = 161.000000000000000000
+      Position.Y = 305.000000000000000000
+      Size.Width = 208.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+    object Label6: TLabel
+      StyledSettings = [Family]
+      Position.X = 33.000000000000000000
+      Position.Y = 302.000000000000000000
+      Size.Width = 73.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 22.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+      Text = 'Id: '
+      TabOrder = 3
+    end
+  end
+  object Sqlite_demoConnection: TFDConnection
+    Params.Strings = (
+      'ConnectionDef=SQLite_Demo')
+    Connected = True
+    LoginPrompt = False
+    Left = 618
+    Top = 169
+  end
+  object AdminTable: TFDQuery
+    Active = True
+    Connection = Sqlite_demoConnection
+    SQL.Strings = (
+      'SELECT * FROM Admin')
+    Left = 620
+    Top = 222
   end
   object FDQuery1: TFDQuery
-    ConnectionName = 'SQLiteconnection'
-    UpdateOptions.AssignedValues = [uvAutoCommitUpdates]
-    UpdateOptions.AutoCommitUpdates = True
-    Left = 432
-    Top = 200
-  end
-  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
-    Provider = 'FMX'
-    Left = 512
-    Top = 232
+    Connection = Sqlite_demoConnection
+    Left = 624
+    Top = 272
   end
 end

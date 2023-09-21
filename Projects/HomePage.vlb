@@ -10,36 +10,30 @@ Coordinates=220,71,66,33
 [Image1]
 Coordinates=136,10,49,51
 
-[AddEmployeeButton]
-Coordinates=10,10,116,51
-
-[Grid1]
-Coordinates=169,71,41,51
-Visible=True
-
-[ViewDataButton]
-Coordinates=10,71,93,51
-
 [LogoutButton]
 Coordinates=195,10,82,51
 
 []
-Coordinates=324,123,82,33
-Visible=False
-
-[BindNavigator1]
-Coordinates=0,0,90,51
+Coordinates=10,10,116,51
+Visible=True
 
 [Sqlite_demoConnection]
 Coordinates=324,71,132,33
 
 [EmployeeTable]
-Coordinates=324,1,89,33
+Coordinates=621,31,89,33
 Visible=True
 
 [BindSourceDB1]
-Coordinates=423,1,92,87
+Coordinates=522,21,92,195
 
 [BindingsList1]
 Coordinates=324,53,82,33
+
+[Login.FDQuery1]
+Coordinates=14,80,94,51
+
+[Grid1]
+Coordinates=223,123,41,51
+Visible=True
 

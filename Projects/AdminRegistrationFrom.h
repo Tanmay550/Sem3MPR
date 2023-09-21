@@ -33,6 +33,20 @@
 #include <FireDAC.Phys.SQLiteDef.hpp>
 #include <FireDAC.Phys.SQLiteWrapper.Stat.hpp>
 #include <FireDAC.Stan.ExprFuncs.hpp>
+#include <Data.Bind.Components.hpp>
+#include <Data.Bind.DBScope.hpp>
+#include <Data.Bind.EngExt.hpp>
+#include <Data.Bind.Grid.hpp>
+#include <Fmx.Bind.DBEngExt.hpp>
+#include <Fmx.Bind.Editors.hpp>
+#include <Fmx.Bind.Grid.hpp>
+#include <FMX.Grid.hpp>
+#include <FMX.Grid.Style.hpp>
+#include <FMX.ScrollBox.hpp>
+#include <System.Bindings.Outputs.hpp>
+#include <System.Rtti.hpp>
+#include <FireDAC.Phys.MySQL.hpp>
+#include <FireDAC.Phys.MySQLDef.hpp>
 //---------------------------------------------------------------------------
 class TAdminRegistrationForm : public TForm
 {
@@ -47,9 +61,13 @@ __published:	// IDE-managed Components
 	TEdit *PasswordEditAdminR;
 	TEdit *EmailEditAdminR;
 	TSpeedButton *RegisterButton;
-	TFDQuery *FDQuery1;
 	TLabel *Label4;
-	TFDGUIxWaitCursor *FDGUIxWaitCursor1;
+	TFDConnection *Sqlite_demoConnection;
+	TFDQuery *AdminTable;
+	TFDQuery *FDQuery1;
+	TLabel *Label6;
+	TEdit *IdEditAdminR;
+	void __fastcall RegisterButtonClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TAdminRegistrationForm(TComponent* Owner);

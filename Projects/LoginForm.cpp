@@ -25,9 +25,37 @@ __fastcall TLogin::TLogin(TComponent* Owner)
 
 void __fastcall TLogin::LoginButtonAClick(TObject *Sender)
 {
-   DataPage->Show();
+    String username = UsernameAdminEdit->Text;
+    String password = PasswordEdit->Text;
+
+    try {
+        // Set up the SQL query to check user credentials.
+		FDQuery1->SQL->Text = "SELECT * FROM Admin WHERE Username = :username AND Password = :password";
+        FDQuery1->Params->ParamByName("username")->Value = username;
+        FDQuery1->Params->ParamByName("password")->Value = password;
+
+        // Execute the query.
+        FDQuery1->Open();
+
+        // Check if a matching record was found.
+        if (!FDQuery1->Eof) {
+            // Login successful; show the next form or perform other actions.
+            ShowMessage("Login successful!");
+            // Open the next form:
+			DataPage->Show();
+        } else {
+            // Login failed; display an error message.
+            ShowMessage("Login failed. Please check your username and password.");
+        }
+    } catch (Exception &e) {
+        ShowMessage("Error: " + e.Message);
+	}
+	FDQuery1->Close();
 
 }
+
+
+
 //---------------------------------------------------------------------------
 
 void __fastcall TLogin::RegisterButtonClick(TObject *Sender)

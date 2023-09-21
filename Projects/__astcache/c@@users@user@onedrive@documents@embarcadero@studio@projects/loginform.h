@@ -12,6 +12,27 @@
 #include <FMX.StdCtrls.hpp>
 #include <FMX.Edit.hpp>
 #include <FMX.Objects.hpp>
+#include <Data.DB.hpp>
+#include <FireDAC.Comp.Client.hpp>
+#include <FireDAC.FMXUI.Wait.hpp>
+#include <FireDAC.Phys.hpp>
+#include <FireDAC.Phys.Intf.hpp>
+#include <FireDAC.Phys.SQLite.hpp>
+#include <FireDAC.Phys.SQLiteDef.hpp>
+#include <FireDAC.Phys.SQLiteWrapper.Stat.hpp>
+#include <FireDAC.Stan.Async.hpp>
+#include <FireDAC.Stan.Def.hpp>
+#include <FireDAC.Stan.Error.hpp>
+#include <FireDAC.Stan.ExprFuncs.hpp>
+#include <FireDAC.Stan.Intf.hpp>
+#include <FireDAC.Stan.Option.hpp>
+#include <FireDAC.Stan.Pool.hpp>
+#include <FireDAC.UI.Intf.hpp>
+#include <FireDAC.Comp.DataSet.hpp>
+#include <FireDAC.DApt.hpp>
+#include <FireDAC.DApt.Intf.hpp>
+#include <FireDAC.DatS.hpp>
+#include <FireDAC.Stan.Param.hpp>
 //---------------------------------------------------------------------------
 class TLogin : public TForm
 {
@@ -32,6 +53,8 @@ __published:	// IDE-managed Components
 	TSpeedButton *LoginButtonB;
 	TImage *Image1;
 	TImage *Image2;
+	TFDConnection *SQLite_DemoConnection;
+	TFDQuery *FDQuery1;
 	void __fastcall LoginButtonAClick(TObject *Sender);
 	void __fastcall RegisterButtonClick(TObject *Sender);
 	void __fastcall LoginButtonBClick(TObject *Sender);
