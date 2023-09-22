@@ -8,6 +8,7 @@
 #include "HomePage.h"
 #include "AdminRegistrationFrom.h"
 #include "TaskListEmployee.h"
+#include "Vcl.Bind.Consts.hpp"
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -26,7 +27,7 @@ __fastcall TLogin::TLogin(TComponent* Owner)
 void __fastcall TLogin::LoginButtonAClick(TObject *Sender)
 {
     String username = UsernameAdminEdit->Text;
-    String password = PasswordEdit->Text;
+	String password = PasswordEdit->Text;
 
     try {
         // Set up the SQL query to check user credentials.
@@ -41,7 +42,7 @@ void __fastcall TLogin::LoginButtonAClick(TObject *Sender)
         if (!FDQuery1->Eof) {
             // Login successful; show the next form or perform other actions.
             ShowMessage("Login successful!");
-            // Open the next form:
+			// Open the next form:
 			DataPage->Show();
         } else {
             // Login failed; display an error message.
@@ -51,6 +52,8 @@ void __fastcall TLogin::LoginButtonAClick(TObject *Sender)
         ShowMessage("Error: " + e.Message);
 	}
 	FDQuery1->Close();
+	UsernameAdminEdit->Text="";
+	PasswordEdit->Text="";
 
 }
 
@@ -66,7 +69,40 @@ void __fastcall TLogin::RegisterButtonClick(TObject *Sender)
 
 void __fastcall TLogin::LoginButtonBClick(TObject *Sender)
 {
-	TaskList->Show();
+
+   String usernameEmployee = EmployeeUsernameEdit->Text;
+
+
+	try {
+		// Set up the SQL query to check user credentials.
+		FDQuery2->SQL->Text = "SELECT * FROM Employee WHERE Username = :username";
+		FDQuery2->Params->ParamByName("username")->Value = usernameEmployee;
+
+
+        // Execute the query.
+		FDQuery2->Open();
+
+        // Check if a matching record was found.
+		if (!FDQuery2->Eof) {
+            // Login successful; show the next form or perform other actions.
+            ShowMessage("Login successful!");
+			// Open the next form:
+			TaskList->SetUsername(usernameEmployee);
+			TaskList->Show();
+        } else {
+            // Login failed; display an error message.
+			ShowMessage("Login failed. Please check your username provided by the company.");
+        }
+    } catch (Exception &e) {
+        ShowMessage("Error: " + e.Message);
+	}
+	FDQuery2->Close();
+
+
+
+
+
+
 }
 //---------------------------------------------------------------------------
 

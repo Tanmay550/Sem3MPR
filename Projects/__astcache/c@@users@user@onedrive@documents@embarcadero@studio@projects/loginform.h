@@ -55,6 +55,7 @@ __published:	// IDE-managed Components
 	TImage *Image2;
 	TFDConnection *SQLite_DemoConnection;
 	TFDQuery *FDQuery1;
+	TFDQuery *FDQuery2;
 	void __fastcall LoginButtonAClick(TObject *Sender);
 	void __fastcall RegisterButtonClick(TObject *Sender);
 	void __fastcall LoginButtonBClick(TObject *Sender);

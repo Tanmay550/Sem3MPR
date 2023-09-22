@@ -2,6 +2,8 @@ FireDACMySQLDriver280.bpl
 bindengine280.bpl
 bindcompfmx280.bpl
 bindcomp280.bpl
+vcl280.bpl
+bindcompvcl280.bpl
 fmxFireDAC280.bpl
 FireDAC280.bpl
 dbrtl280.bpl

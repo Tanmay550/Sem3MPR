@@ -6,9 +6,11 @@
 #include <FireDAC.UI.Intf.hpp>
 
 
+
 #pragma hdrstop
 
 #include "AdminRegistrationFrom.h"
+#include "Vcl.Bind.Consts.hpp"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.fmx"
