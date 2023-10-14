@@ -10,7 +10,7 @@ object TaskList: TTaskList
   DesignerMasterStyle = 0
   object ColorBox1: TColorBox
     Align = Client
-    Color = claRoyalblue
+    Color = claSkyblue
     Size.Width = 650.000000000000000000
     Size.Height = 485.000000000000000000
     Size.PlatformDefault = False
@@ -52,12 +52,12 @@ object TaskList: TTaskList
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       TextSettings.FontColor = claWhite
       Text = 'Task List : '
-      TabOrder = 2
+      TabOrder = 3
     end
     object AddTaskButton: TSpeedButton
       StyledSettings = [Family]
-      Position.X = 296.000000000000000000
-      Position.Y = 112.000000000000000000
+      Position.X = 264.000000000000000000
+      Position.Y = 105.000000000000000000
       Size.Width = 113.000000000000000000
       Size.Height = 30.000000000000000000
       Size.PlatformDefault = False
@@ -82,7 +82,7 @@ object TaskList: TTaskList
     end
     object AddTaskEdit: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
-      TabOrder = 3
+      TabOrder = 4
       TextSettings.Font.Size = 24.000000000000000000
       TextSettings.Font.StyleExt = {00070000000000000004000000}
       Position.X = 16.000000000000000000
@@ -93,31 +93,59 @@ object TaskList: TTaskList
       StyledSettings = [Family, FontColor]
     end
     object ListBox: TListBox
-      Position.X = 24.000000000000000000
+      Position.X = 16.000000000000000000
       Position.Y = 224.000000000000000000
-      Size.Width = 409.000000000000000000
+      Size.Width = 249.000000000000000000
       Size.Height = 216.000000000000000000
       Size.PlatformDefault = False
-      TabOrder = 4
+      TabOrder = 6
       DisableFocusEffect = True
       DefaultItemStyles.ItemStyle = ''
       DefaultItemStyles.GroupHeaderStyle = ''
       DefaultItemStyles.GroupFooterStyle = ''
       OnItemClick = ListBoxItemClick
-      Viewport.Width = 405.000000000000000000
+      Viewport.Width = 245.000000000000000000
       Viewport.Height = 212.000000000000000000
+    end
+    object ListComp: TListBox
+      Position.X = 352.000000000000000000
+      Position.Y = 224.000000000000000000
+      Size.Width = 249.000000000000000000
+      Size.Height = 216.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 5
+      DisableFocusEffect = True
+      DefaultItemStyles.ItemStyle = ''
+      DefaultItemStyles.GroupHeaderStyle = ''
+      DefaultItemStyles.GroupFooterStyle = ''
+      OnItemClick = ListBoxItemClick
+      Viewport.Width = 245.000000000000000000
+      Viewport.Height = 212.000000000000000000
+    end
+    object LabelCompleted: TLabel
+      StyledSettings = [Family]
+      Position.X = 352.000000000000000000
+      Position.Y = 168.000000000000000000
+      Size.Width = 137.000000000000000000
+      Size.Height = 33.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 22.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = claWhite
+      Text = 'Completed : '
+      TabOrder = 2
     end
   end
   object Sqlite_demoConnection: TFDConnection
     Params.Strings = (
       'ConnectionDef=SQLite_Demo')
     LoginPrompt = False
-    Left = 575
-    Top = 168
+    Left = 583
+    Top = 56
   end
   object FDQuery1: TFDQuery
     Connection = Sqlite_demoConnection
-    Left = 560
-    Top = 240
+    Left = 576
+    Top = 112
   end
 end

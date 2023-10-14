@@ -48,6 +48,8 @@ __published:	// IDE-managed Components
 	TFDConnection *Sqlite_demoConnection;
 	TFDQuery *FDQuery1;
 	TListBox *ListBox;
+	TListBox *ListComp;
+	TLabel *LabelCompleted;
 	void __fastcall LogoutButtonClick(TObject *Sender);
 	void __fastcall RetrieveAndDisplayTasks();
 	void __fastcall AddTaskButtonClick(TObject *Sender);

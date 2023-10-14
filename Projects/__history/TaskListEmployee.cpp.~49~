@@ -44,7 +44,7 @@ void __fastcall TTaskList::RetrieveAndDisplayTasks()
             tasksText += FDQuery1->FieldByName("Tasks")->AsString + "\r\n";
             FDQuery1->Next();
         }
-		ListBox->Text = tasksText;
+		ListBox->Items->Add(tasksText);
         ShowMessage("Retrieved Tasks: \n" + tasksText);
     }
     catch (Exception &e)
@@ -66,7 +66,17 @@ void __fastcall TTaskList::LogoutButtonClick(TObject *Sender)
 
 void __fastcall TTaskList::AddTaskButtonClick(TObject *Sender)
 {
-    String taskText = AddTaskEdit->Text();
+	String taskText = AddTaskEdit->Text;
+	ListBox->Items->Add(taskText);
+	AddTaskEdit->Text="";
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TTaskList::ListBoxItemClick(TCustomListBox * const Sender, TListBoxItem * const Item)
+
+{
+	int index = Item->Index;
+    ListBox->Items->Delete(index);
 }
 //---------------------------------------------------------------------------
 

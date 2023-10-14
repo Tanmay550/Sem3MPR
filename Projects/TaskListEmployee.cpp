@@ -76,7 +76,10 @@ void __fastcall TTaskList::ListBoxItemClick(TCustomListBox * const Sender, TList
 
 {
 	int index = Item->Index;
-    ListBox->Items->Delete(index);
+	UnicodeString selectedItemText = ListBox->Items->Strings[ListBox->ItemIndex];
+	ListBox->Items->Delete(index);
+	ListComp->Items->Add(selectedItemText);
 }
 //---------------------------------------------------------------------------
+
 
