@@ -1,0 +1,16 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Unit1.h"
+//---------------------------------------------------------------------------
+String loggedInEmployeeID = "";
+
+void SetLoggedInEmployeeID(String employeeID) {
+    loggedInEmployeeID = employeeID;
+}
+
+String GetLoggedInEmployeeID() {
+    return loggedInEmployeeID;
+}
+#pragma package(smart_init)

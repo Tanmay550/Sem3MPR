@@ -65,7 +65,6 @@ __published:	// IDE-managed Components
 	TGrid *Grid1;
 	TLinkGridToDataSource *LinkGridToDataSourceBindSourceDB12;
 	void __fastcall LogoutButtonClick(TObject *Sender);
-	void __fastcall AddEmployeeButtonClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TDataPage(TComponent* Owner);

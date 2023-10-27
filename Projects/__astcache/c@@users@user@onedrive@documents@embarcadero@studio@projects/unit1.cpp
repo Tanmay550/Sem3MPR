@@ -1,16 +1,22 @@
-//---------------------------------------------------------------------------
+﻿//---------------------------------------------------------------------------
 
-#include <fmx.h>
 #pragma hdrstop
 
 #include "Unit1.h"
 //---------------------------------------------------------------------------
-#pragma package(smart_init)
-#pragma resource "*.fmx"
-TForm1 *Form1;
-//---------------------------------------------------------------------------
-__fastcall TForm1::TForm1(TComponent* Owner)
-	: TForm(Owner)
-{
+String loggedInEmployeeID ;
+
+void SetLoggedInEmployeeID(String employeeID) {
+    loggedInEmployeeID = employeeID;
 }
-//---------------------------------------------------------------------------
+
+String GetLoggedInEmployeeID() {
+   try{
+	return loggedInEmployeeID;
+   }
+   catch (Exception &e) {
+        ShowMessage("Error retrieving username: " + e.Message);
+        return "";  // or handle the error appropriately
+    }
+}
+#pragma package(smart_init)

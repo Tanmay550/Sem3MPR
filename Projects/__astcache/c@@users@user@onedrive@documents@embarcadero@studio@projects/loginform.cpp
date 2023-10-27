@@ -9,16 +9,17 @@
 #include "AdminRegistrationFrom.h"
 #include "TaskListEmployee.h"
 #include "Vcl.Bind.Consts.hpp"
+#include "Unit3.h"
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.fmx"
 TLogin *Login;
+
 //---------------------------------------------------------------------------
 __fastcall TLogin::TLogin(TComponent* Owner)
 	: TForm(Owner)
 {
-
 }
 //---------------------------------------------------------------------------
 
@@ -47,7 +48,8 @@ void __fastcall TLogin::LoginButtonAClick(TObject *Sender)
         } else {
             // Login failed; display an error message.
             ShowMessage("Login failed. Please check your username and password.");
-        }
+		}
+        SetLoggedInEmployeeID(username);
     } catch (Exception &e) {
         ShowMessage("Error: " + e.Message);
 	}
@@ -71,6 +73,8 @@ void __fastcall TLogin::LoginButtonBClick(TObject *Sender)
 {
 
    String usernameEmployee = EmployeeUsernameEdit->Text;
+    TMyDataModule::SetUsername(UsernameEdit->Text);
+
 
 
 	try {
@@ -87,7 +91,7 @@ void __fastcall TLogin::LoginButtonBClick(TObject *Sender)
             // Login successful; show the next form or perform other actions.
             ShowMessage("Login successful!");
 			// Open the next form:
-			TaskList->SetUsername(usernameEmployee);
+
 			TaskList->Show();
         } else {
             // Login failed; display an error message.

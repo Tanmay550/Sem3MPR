@@ -72,7 +72,7 @@
         <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
         <Icon_MainIcon>$(BDS)\bin\cbuilder_PROJECTICON.ico</Icon_MainIcon>
         <Icns_MainIcns>$(BDS)\bin\cbuilder_PROJECTICNS.icns</Icns_MainIcns>
-        <AllPackageLibs>rtl.lib;fmx.lib;FireDACSqliteDriver.lib;FireDACCommonDriver.lib;FireDACCommon.lib;xmlrtl.lib;dbrtl.lib;FireDAC.lib;fmxFireDAC.lib</AllPackageLibs>
+        <AllPackageLibs>rtl.lib;fmx.lib;FireDACSqliteDriver.lib;FireDACCommonDriver.lib;FireDACCommon.lib;xmlrtl.lib;dbrtl.lib;FireDAC.lib;fmxFireDAC.lib;bindcompvcl.lib;vcl.lib;bindcomp.lib;bindengine.lib;bindcompfmx.lib;FireDACMySQLDriver.lib</AllPackageLibs>
         <_TCHARMapping>wchar_t</_TCHARMapping>
         <Multithreaded>true</Multithreaded>
         <SanitizedProjectName>EMS</SanitizedProjectName>
@@ -131,7 +131,7 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
         <BCC_UseClassicCompiler>false</BCC_UseClassicCompiler>
         <ILINK_LibraryPath>$(BDSLIB)\$(PLATFORM)$(CC_SUFFIX)\debug;$(ILINK_LibraryPath)</ILINK_LibraryPath>
-        <LinkPackageImports>rtl.bpi;fmx.bpi;FireDACSqliteDriver.bpi;FireDACCommonDriver.bpi;FireDACCommon.bpi;xmlrtl.bpi;dbrtl.bpi;FireDAC.bpi;fmxFireDAC.bpi</LinkPackageImports>
+        <LinkPackageImports>rtl.bpi;fmx.bpi;FireDACSqliteDriver.bpi;FireDACCommonDriver.bpi;FireDACCommon.bpi;xmlrtl.bpi;dbrtl.bpi;FireDAC.bpi;fmxFireDAC.bpi;bindcompvcl.bpi;vcl.bpi;bindcomp.bpi;bindengine.bpi;bindcompfmx.bpi;FireDACMySQLDriver.bpi</LinkPackageImports>
         <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
         <VerInfo_Locale>1033</VerInfo_Locale>
         <IncludePath>C:\Program Files (x86)\Embarcadero\Studio\22.0\include</IncludePath>
@@ -151,12 +151,6 @@
         <AppDPIAwarenessMode>PerMonitorV2</AppDPIAwarenessMode>
     </PropertyGroup>
     <ItemGroup>
-        <CppCompile Include="AddEmployeeForm.cpp">
-            <Form>EmployeeAddForm</Form>
-            <FormType>fmx</FormType>
-            <DependentOn>AddEmployeeForm.h</DependentOn>
-            <BuildOrder>5</BuildOrder>
-        </CppCompile>
         <CppCompile Include="AdminRegistrationFrom.cpp">
             <Form>AdminRegistrationForm</Form>
             <FormType>fmx</FormType>
@@ -188,11 +182,18 @@
             <DependentOn>TaskListEmployee.h</DependentOn>
             <BuildOrder>4</BuildOrder>
         </CppCompile>
-        <FormResources Include="HomePage.fmx"/>
+        <CppCompile Include="Unit3.cpp">
+            <Form>DataModule3</Form>
+            <FormType>dfm</FormType>
+            <DesignClass>TDataModule</DesignClass>
+            <DependentOn>Unit3.h</DependentOn>
+            <BuildOrder>6</BuildOrder>
+        </CppCompile>
         <FormResources Include="LoginForm.fmx"/>
         <FormResources Include="TaskListEmployee.fmx"/>
-        <FormResources Include="AddEmployeeForm.fmx"/>
+        <FormResources Include="HomePage.fmx"/>
         <FormResources Include="AdminRegistrationFrom.fmx"/>
+        <FormResources Include="Unit3.dfm"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

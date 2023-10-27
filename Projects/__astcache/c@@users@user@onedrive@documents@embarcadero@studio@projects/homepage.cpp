@@ -1,11 +1,11 @@
-﻿//---------------------------------------------------------------------------
+//---------------------------------------------------------------------------
 
 #include <fmx.h>
 #pragma hdrstop
 
 #include "HomePage.h"
 #include "LoginForm.h"
-#include "AddEmployeeForm.h"
+
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.fmx"
@@ -30,11 +30,5 @@ void __fastcall TDataPage::LogoutButtonClick(TObject *Sender)
 }
 //---------------------------------------------------------------------------
 
-void __fastcall TDataPage::AddEmployeeButtonClick(TObject *Sender)
-{
-	 EmployeeAddForm->Show();
-
-}
-//---------------------------------------------------------------------------
 
 

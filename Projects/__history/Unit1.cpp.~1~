@@ -1,0 +1,16 @@
+//---------------------------------------------------------------------------
+
+#pragma hdrstop
+
+#include "Unit1.h"
+//---------------------------------------------------------------------------
+int loggedInEmployeeID = -1; // Global variable
+
+void SetLoggedInEmployeeID(int employeeID) {
+    loggedInEmployeeID = employeeID;
+}
+
+int GetLoggedInEmployeeID() {
+    return loggedInEmployeeID;
+}
+#pragma package(smart_init)

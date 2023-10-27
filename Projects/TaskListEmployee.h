@@ -46,20 +46,21 @@ __published:	// IDE-managed Components
 	TSpeedButton *AddTaskButton;
 	TSpeedButton *LogoutButton;
 	TFDConnection *Sqlite_demoConnection;
-	TFDQuery *FDQuery1;
 	TListBox *ListBox;
 	TListBox *ListComp;
 	TLabel *LabelCompleted;
+	TFDQuery *FDQuery2;
+	TSpeedButton *ShowAssignedTasksButton;
 	void __fastcall LogoutButtonClick(TObject *Sender);
-	void __fastcall RetrieveAndDisplayTasks();
 	void __fastcall AddTaskButtonClick(TObject *Sender);
 	void __fastcall ListBoxItemClick(TCustomListBox * const Sender, TListBoxItem * const Item);
+	void __fastcall ShowAssignedTasksButtonClick(TObject *Sender);
 
 private:	// User declarations
      AnsiString FUsername;
 public:		// User declarations
 	__fastcall TTaskList(TComponent* Owner);
-     void SetUsername(const AnsiString& username);
+
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TTaskList *TaskList;

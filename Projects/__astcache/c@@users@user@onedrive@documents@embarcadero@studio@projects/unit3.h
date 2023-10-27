@@ -4,17 +4,18 @@
 #define Unit3H
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
-#include <FMX.Controls.hpp>
-#include <FMX.Forms.hpp>
 //---------------------------------------------------------------------------
-class TForm3 : public TForm
+class TDataModule3 : public TDataModule
 {
-__published:	// IDE-managed Components
+__published: TStringField *UsernameField	// IDE-managed Components
 private:	// User declarations
-public:		// User declarations
-	__fastcall TForm3(TComponent* Owner);
+public:
+void SetUsername(const String& username);
+      String GetUsername();
+};	// User declarations
+	__fastcall TDataModule3(TComponent* Owner);
 };
 //---------------------------------------------------------------------------
-extern PACKAGE TForm3 *Form3;
+extern PACKAGE TDataModule3 *DataModule3;
 //---------------------------------------------------------------------------
 #endif
