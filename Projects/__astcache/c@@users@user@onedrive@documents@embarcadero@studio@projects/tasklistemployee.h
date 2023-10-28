@@ -34,27 +34,33 @@
 #include <FireDAC.UI.Intf.hpp>
 #include <FMX.Layouts.hpp>
 #include <FMX.ListBox.hpp>
+#include <FMX.Media.hpp>
+#include <FMX.Objects.hpp>
+#include <FMX.Ani.hpp>
 //---------------------------------------------------------------------------
 class TTaskList : public TForm
 {
 __published:	// IDE-managed Components
-	TColorBox *ColorBox1;
-	TLabel *Label1;
+	TFDConnection *Sqlite_demoConnection;
+	TFDQuery *FDQuery2;
+	TImage *Z;
 	TLabel *Label2;
-	TEdit *AddTaskEdit;
 	TLabel *Label3;
 	TSpeedButton *AddTaskButton;
 	TSpeedButton *LogoutButton;
-	TFDConnection *Sqlite_demoConnection;
+	TEdit *AddTaskEdit;
 	TListBox *ListBox;
 	TListBox *ListComp;
 	TLabel *LabelCompleted;
-	TFDQuery *FDQuery2;
 	TSpeedButton *ShowAssignedTasksButton;
+	TColorBox *ColorBox1;
+	TColorBox *ColorBox2;
+	TLabel *Label1;
 	void __fastcall LogoutButtonClick(TObject *Sender);
 	void __fastcall AddTaskButtonClick(TObject *Sender);
 	void __fastcall ListBoxItemClick(TCustomListBox * const Sender, TListBoxItem * const Item);
 	void __fastcall ShowAssignedTasksButtonClick(TObject *Sender);
+	void __fastcall FormShow(TObject *Sender);
 
 private:	// User declarations
      AnsiString FUsername;

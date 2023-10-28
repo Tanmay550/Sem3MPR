@@ -87,7 +87,8 @@ void __fastcall TLogin::LoginButtonBClick(TObject *Sender)
 
         // Check if a matching record was found.
 		if (!FDQuery2->Eof) {
-            // Login successful; show the next form or perform other actions.
+			// Login successful; show the next form or perform other actions.
+            SharedName = FDQuery2->FieldByName("Name")->AsString;
             ShowMessage("Login successful!");
 			// Open the next form:
 

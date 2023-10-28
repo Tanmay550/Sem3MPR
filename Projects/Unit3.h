@@ -6,6 +6,7 @@
 #include <System.Classes.hpp>
 //---------------------------------------------------------------------------
 extern String SharedUsername;
+extern String SharedName;
 class TDataModule3 : public TDataModule
 {
 // SharedUnit.h

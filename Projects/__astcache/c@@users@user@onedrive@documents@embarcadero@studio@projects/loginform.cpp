@@ -49,7 +49,7 @@ void __fastcall TLogin::LoginButtonAClick(TObject *Sender)
             // Login failed; display an error message.
             ShowMessage("Login failed. Please check your username and password.");
 		}
-        SetLoggedInEmployeeID(username);
+
     } catch (Exception &e) {
         ShowMessage("Error: " + e.Message);
 	}
@@ -73,8 +73,7 @@ void __fastcall TLogin::LoginButtonBClick(TObject *Sender)
 {
 
    String usernameEmployee = EmployeeUsernameEdit->Text;
-    TMyDataModule::SetUsername(UsernameEdit->Text);
-
+   SharedUsername = usernameEmployee;
 
 
 	try {
@@ -88,7 +87,8 @@ void __fastcall TLogin::LoginButtonBClick(TObject *Sender)
 
         // Check if a matching record was found.
 		if (!FDQuery2->Eof) {
-            // Login successful; show the next form or perform other actions.
+			// Login successful; show the next form or perform other actions.
+            SharedName = FDQuery2->FieldByName("Name")->AsString;
             ShowMessage("Login successful!");
 			// Open the next form:
 

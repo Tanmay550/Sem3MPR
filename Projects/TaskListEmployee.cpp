@@ -33,6 +33,7 @@ void __fastcall TTaskList::AddTaskButtonClick(TObject *Sender)
 	String taskText = AddTaskEdit->Text;
 	ListBox->Items->Add(taskText);
 	AddTaskEdit->Text="";
+
 }
 //---------------------------------------------------------------------------
 
@@ -78,6 +79,16 @@ void __fastcall TTaskList::ShowAssignedTasksButtonClick(TObject *Sender)
         ShowMessage("Error: " + e.Message);
 	}
       Sqlite_demoConnection->Connected = false;
+}
+//---------------------------------------------------------------------------
+
+
+
+
+
+void __fastcall TTaskList::FormShow(TObject *Sender)
+{
+   Label1->Text =  "Welcome Back, "  + SharedName;
 }
 //---------------------------------------------------------------------------
 

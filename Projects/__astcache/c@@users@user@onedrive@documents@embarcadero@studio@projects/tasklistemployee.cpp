@@ -3,7 +3,7 @@
 #include "TaskListEmployee.h"
 #include "LoginForm.h"
 
-
+#include "Unit3.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.fmx"
@@ -33,6 +33,7 @@ void __fastcall TTaskList::AddTaskButtonClick(TObject *Sender)
 	String taskText = AddTaskEdit->Text;
 	ListBox->Items->Add(taskText);
 	AddTaskEdit->Text="";
+
 }
 //---------------------------------------------------------------------------
 
@@ -53,7 +54,8 @@ void __fastcall TTaskList::ListBoxItemClick(TCustomListBox * const Sender, TList
 
 void __fastcall TTaskList::ShowAssignedTasksButtonClick(TObject *Sender)
 {
-	String Username;
+	
+	String Username = SharedUsername;
 
 	String task;
 	 try {
@@ -68,7 +70,7 @@ void __fastcall TTaskList::ShowAssignedTasksButtonClick(TObject *Sender)
 		ListBox->Items->Add(task);
 		FDQuery2->Next();
 	}
-        ShowMessage("Username: " + Username);
+        
 
 
 	 }
@@ -77,6 +79,16 @@ void __fastcall TTaskList::ShowAssignedTasksButtonClick(TObject *Sender)
         ShowMessage("Error: " + e.Message);
 	}
       Sqlite_demoConnection->Connected = false;
+}
+//---------------------------------------------------------------------------
+
+
+
+
+
+void __fastcall TTaskList::FormShow(TObject *Sender)
+{
+   Label1->Text =  "Welcome Back, "  + SharedName;
 }
 //---------------------------------------------------------------------------
 

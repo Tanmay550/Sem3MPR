@@ -1,19 +1,22 @@
-//---------------------------------------------------------------------------
+﻿//---------------------------------------------------------------------------
 
 #ifndef Unit3H
 #define Unit3H
 //---------------------------------------------------------------------------
 #include <System.Classes.hpp>
 //---------------------------------------------------------------------------
+extern String SharedUsername;
+extern String SharedName;
 class TDataModule3 : public TDataModule
 {
-__published: TStringField *UsernameField	// IDE-managed Components
+// SharedUnit.h
+
+
+__published:;	// IDE-managed Components
 private:	// User declarations
-public:
-void SetUsername(const String& username);
-      String GetUsername();
-};	// User declarations
+public:		// User declarations
 	__fastcall TDataModule3(TComponent* Owner);
+
 };
 //---------------------------------------------------------------------------
 extern PACKAGE TDataModule3 *DataModule3;
