@@ -1,21 +1,16 @@
 //---------------------------------------------------------------------------
 
-#ifndef Unit3H
-#define Unit3H
+#include <fmx.h>
+#pragma hdrstop
+
+#include "Unit4.h"
 //---------------------------------------------------------------------------
-#include <System.Classes.hpp>
+#pragma package(smart_init)
+#pragma resource "*.fmx"
+TEmployeeProfile *EmployeeProfile;
 //---------------------------------------------------------------------------
-class TDataModule3 : public TDataModule
+__fastcall TEmployeeProfile::TEmployeeProfile(TComponent* Owner)
+	: TForm(Owner)
 {
-__published: TStringField *UsernameField	// IDE-managed Components
-private:	// User declarations
-public:
-void SetUsername(const String& username);
-      String GetUsername();
-};	// User declarations
-	__fastcall TDataModule3(TComponent* Owner);
-};
+}
 //---------------------------------------------------------------------------
-extern PACKAGE TDataModule3 *DataModule3;
-//---------------------------------------------------------------------------
-#endif

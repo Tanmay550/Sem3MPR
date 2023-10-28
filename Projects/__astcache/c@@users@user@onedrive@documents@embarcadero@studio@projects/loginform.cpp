@@ -10,6 +10,7 @@
 #include "TaskListEmployee.h"
 #include "Vcl.Bind.Consts.hpp"
 #include "Unit3.h"
+#include "Unit4.h"
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -92,7 +93,7 @@ void __fastcall TLogin::LoginButtonBClick(TObject *Sender)
             ShowMessage("Login successful!");
 			// Open the next form:
 
-			TaskList->Show();
+			EmployeeProfile->Show();
         } else {
             // Login failed; display an error message.
 			ShowMessage("Login failed. Please check your username provided by the company.");

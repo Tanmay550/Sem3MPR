@@ -1,0 +1,35 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit4H
+#define Unit4H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <FMX.Controls.hpp>
+#include <FMX.Forms.hpp>
+#include <FMX.Colors.hpp>
+#include <FMX.Controls.Presentation.hpp>
+#include <FMX.Objects.hpp>
+#include <FMX.StdCtrls.hpp>
+#include <FMX.Types.hpp>
+//---------------------------------------------------------------------------
+class TEmployeeProfile : public TForm
+{
+__published:	// IDE-managed Components
+	TColorBox *ColorBox1;
+	TLabel *NameLabel;
+	TImage *Image1;
+	TLabel *EmailLabel;
+	TLabel *DepartmentLabel;
+	TLabel *ContactLabel;
+	TSpeedButton *TaskListButton;
+	TSpeedButton *SpeedButton2;
+	TImage *Image2;
+	TColorBox *ColorBox2;
+private:	// User declarations
+public:		// User declarations
+	__fastcall TEmployeeProfile(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TEmployeeProfile *EmployeeProfile;
+//---------------------------------------------------------------------------
+#endif

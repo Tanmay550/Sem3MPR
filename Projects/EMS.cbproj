@@ -189,11 +189,18 @@
             <DependentOn>Unit3.h</DependentOn>
             <BuildOrder>6</BuildOrder>
         </CppCompile>
+        <CppCompile Include="Unit4.cpp">
+            <Form>EmployeeProfile</Form>
+            <FormType>fmx</FormType>
+            <DependentOn>Unit4.h</DependentOn>
+            <BuildOrder>7</BuildOrder>
+        </CppCompile>
         <FormResources Include="LoginForm.fmx"/>
         <FormResources Include="TaskListEmployee.fmx"/>
+        <FormResources Include="Unit3.dfm"/>
         <FormResources Include="HomePage.fmx"/>
         <FormResources Include="AdminRegistrationFrom.fmx"/>
-        <FormResources Include="Unit3.dfm"/>
+        <FormResources Include="Unit4.fmx"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>
