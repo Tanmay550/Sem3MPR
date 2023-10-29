@@ -18,7 +18,8 @@ __fastcall TEmployeeProfile::TEmployeeProfile(TComponent* Owner)
 //---------------------------------------------------------------------------
 void __fastcall TEmployeeProfile::TaskListButtonClick(TObject *Sender)
 {
-    TaskList->Show();
+	TaskList->Show();
+
 }
 //---------------------------------------------------------------------------
 void __fastcall TEmployeeProfile::FormShow(TObject *Sender)

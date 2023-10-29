@@ -173,4 +173,9 @@ object AdminRegistrationForm: TAdminRegistrationForm
     Left = 624
     Top = 272
   end
+  object SQLQuery1: TSQLQuery
+    Params = <>
+    Left = 632
+    Top = 192
+  end
 end

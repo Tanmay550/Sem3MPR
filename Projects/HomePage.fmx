@@ -30677,7 +30677,7 @@ object DataPage: TDataPage
       StyledSettings = [Family, FontColor]
       TabOrder = 7
       RowHeight = 40.000000000000000000
-      RowCount = 2
+      RowCount = 4
       Viewport.Width = 813.000000000000000000
       Viewport.Height = 344.000000000000000000
     end

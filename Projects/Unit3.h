@@ -7,6 +7,7 @@
 //---------------------------------------------------------------------------
 extern String SharedUsername;
 extern String SharedName;
+extern String AdminUsername;
 class TDataModule3 : public TDataModule
 {
 // SharedUnit.h

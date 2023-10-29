@@ -47,6 +47,8 @@
 #include <System.Rtti.hpp>
 #include <FireDAC.Phys.MySQL.hpp>
 #include <FireDAC.Phys.MySQLDef.hpp>
+#include <Data.FMTBcd.hpp>
+#include <Data.SqlExpr.hpp>
 //---------------------------------------------------------------------------
 class TAdminRegistrationForm : public TForm
 {
@@ -67,6 +69,7 @@ __published:	// IDE-managed Components
 	TFDQuery *FDQuery1;
 	TLabel *Label6;
 	TEdit *IdEditAdminR;
+	TSQLQuery *SQLQuery1;
 	void __fastcall RegisterButtonClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations

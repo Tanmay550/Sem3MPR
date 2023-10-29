@@ -10,9 +10,10 @@
 USEFORM("LoginForm.cpp", Login);
 USEFORM("TaskListEmployee.cpp", TaskList);
 USEFORM("Unit3.cpp", DataModule3); /* TDataModule: File Type */
-USEFORM("HomePage.cpp", DataPage);
-USEFORM("AdminRegistrationFrom.cpp", AdminRegistrationForm);
 USEFORM("Unit4.cpp", EmployeeProfile);
+USEFORM("AdminRegistrationFrom.cpp", AdminRegistrationForm);
+USEFORM("HomePage.cpp", DataPage);
+USEFORM("AdminProfile.cpp", Form5);
 //---------------------------------------------------------------------------
 extern "C" int FMXmain()
 {
@@ -25,6 +26,7 @@ extern "C" int FMXmain()
 		Application->CreateForm(__classid(TAdminRegistrationForm), &AdminRegistrationForm);
 		Application->CreateForm(__classid(TDataModule3), &DataModule3);
 		Application->CreateForm(__classid(TEmployeeProfile), &EmployeeProfile);
+		Application->CreateForm(__classid(TForm5), &Form5);
 		Application->Run();
 	}
 	catch (Exception &exception)

@@ -11,6 +11,7 @@
 #include "Vcl.Bind.Consts.hpp"
 #include "Unit3.h"
 #include "Unit4.h"
+#include "AdminProfile.h"
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -30,6 +31,7 @@ void __fastcall TLogin::LoginButtonAClick(TObject *Sender)
 {
     String username = UsernameAdminEdit->Text;
 	String password = PasswordEdit->Text;
+    AdminUsername = username;
 
     try {
         // Set up the SQL query to check user credentials.
@@ -45,7 +47,7 @@ void __fastcall TLogin::LoginButtonAClick(TObject *Sender)
             // Login successful; show the next form or perform other actions.
             ShowMessage("Login successful!");
 			// Open the next form:
-			DataPage->Show();
+			Form5->Show();
         } else {
             // Login failed; display an error message.
             ShowMessage("Login failed. Please check your username and password.");
@@ -102,6 +104,7 @@ void __fastcall TLogin::LoginButtonBClick(TObject *Sender)
         ShowMessage("Error: " + e.Message);
 	}
 	FDQuery2->Close();
+    EmployeeUsernameEdit->Text = "";
 
 
 

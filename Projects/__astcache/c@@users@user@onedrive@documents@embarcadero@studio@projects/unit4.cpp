@@ -1,4 +1,4 @@
-//---------------------------------------------------------------------------
+﻿//---------------------------------------------------------------------------
 
 #include <fmx.h>
 #pragma hdrstop
@@ -18,7 +18,8 @@ __fastcall TEmployeeProfile::TEmployeeProfile(TComponent* Owner)
 //---------------------------------------------------------------------------
 void __fastcall TEmployeeProfile::TaskListButtonClick(TObject *Sender)
 {
-    TaskList->Show();
+	TaskList->Show();
+    EmployeeProfile->Close();
 }
 //---------------------------------------------------------------------------
 void __fastcall TEmployeeProfile::FormShow(TObject *Sender)
