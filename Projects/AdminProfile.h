@@ -32,6 +32,7 @@
 #include <FireDAC.Stan.Param.hpp>
 #include <FireDAC.Stan.Pool.hpp>
 #include <FireDAC.UI.Intf.hpp>
+#include <FMX.Ani.hpp>
 //---------------------------------------------------------------------------
 class TForm5 : public TForm
 {
@@ -46,6 +47,7 @@ __published:	// IDE-managed Components
 	TSpeedButton *DataButton;
 	TFDConnection *Sqlite_demoConnection;
 	TFDQuery *FDQuery1;
+	TFloatAnimation *FloatAnimation1;
 	void __fastcall FormShow(TObject *Sender);
 	void __fastcall DataButtonClick(TObject *Sender);
 private:	// User declarations
